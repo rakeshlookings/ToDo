@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -83,11 +84,12 @@ engine="django.db.backends.postgresql"
 
 DATABASES = {
     'default': {
-        'ENGINE': engine,
-        'NAME': database,
-        'USER': user,
-        'PASSWORD': password,
-        'HOST': 'http://castor.db.elephantsql.com'
+    'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    'NAME': os.environ.get('QOVERY_POSTGRESQL_Z5B5DF0B7_DEFAULT_DATABASE_NAME', 'postgres'),
+    'USER': os.environ.get('QOVERY_POSTGRESQL_Z5B5DF0B7_LOGIN', 'postgres'),
+    'PASSWORD': os.environ.get('QOVERY_POSTGRESQL_Z5B5DF0B7_PASSWORD'),
+    'HOST': os.environ.get('QOVERY_POSTGRESQL_Z5B5DF0B7_HOST', 'z5b5df0b7-postgresql.||Q_DOMAIN||'),
+    'PORT': os.environ.get('QOVERY_POSTGRESQL_Z5B5DF0B7_PORT', 5432),
     }
 }
 
