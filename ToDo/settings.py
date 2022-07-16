@@ -74,13 +74,20 @@ WSGI_APPLICATION = 'ToDo.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+user="myfwxvga",
+password="8Vy6fKo3kXGwBtJAwYv9jBSOzja-3_Gy",
+host='castor.db.elephantsql.com',
+port="5432"
+database="myfwxvga"
+engine="django.db.backends.postgresql"
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'TodoDb',
-        'USER': 'postgres',
-        'PASSWORD': '123456',
-        'HOST': 'localhost'
+        'ENGINE': engine,
+        'NAME': database,
+        'USER': user,
+        'PASSWORD': password,
+        'HOST': 'http://castor.db.elephantsql.com'
     }
 }
 
