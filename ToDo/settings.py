@@ -85,11 +85,11 @@ engine="django.db.backends.postgresql"
 DATABASES = {
     'default': {
     'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    'NAME': os.environ.get('QOVERY_POSTGRESQL_Z5B5DF0B7_DEFAULT_DATABASE_NAME', 'postgres'),
-    'USER': os.environ.get('QOVERY_POSTGRESQL_Z5B5DF0B7_LOGIN', 'postgres'),
-    'PASSWORD': os.environ.get('QOVERY_POSTGRESQL_Z5B5DF0B7_PASSWORD'),
-    'HOST': os.environ.get('QOVERY_POSTGRESQL_Z5B5DF0B7_HOST', 'z5b5df0b7-postgresql.||Q_DOMAIN||'),
-    'PORT': os.environ.get('QOVERY_POSTGRESQL_Z5B5DF0B7_PORT', 5432),
+    'NAME': os.environ.get('QOVERY_POSTGRESQL_Z10F8EBE0_DEFAULT_DATABASE_NAME', 'postgres'),
+    'USER': os.environ.get('QOVERY_POSTGRESQL_Z10F8EBE0_LOGIN', 'postgres'),
+    'PASSWORD': os.environ.get('QOVERY_POSTGRESQL_Z10F8EBE0_PASSWORD'),
+    'HOST': os.environ.get('QOVERY_POSTGRESQL_Z10F8EBE0_HOST', 'z5b5df0b7-postgresql.||Q_DOMAIN||'),
+    'PORT': os.environ.get('QOVERY_POSTGRESQL_Z10F8EBE0_PORT', 5432),
     }
 }
 
